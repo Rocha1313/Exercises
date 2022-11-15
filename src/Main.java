@@ -61,7 +61,7 @@ public class Main {
         int changes = 0;
 
         for(String c : chart){
-            if(!test.equals(c)){
+            if(c.equals("~") && test.equals("-")){
                 changes++;
             }
             test = c;

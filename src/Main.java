@@ -1,6 +1,4 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -58,6 +56,21 @@ public class Main {
     }
 
     public static void exercise4(){
+        String[] chart = new String[]{"-", "-", "~", "-", "-", "-", "-", "~", "~", "-", "-", "~", "~"};
+        String test = chart[0];
+        int changes = 0;
 
+        for(String c : chart){
+            if(!test.equals(c)){
+                changes++;
+            }
+            test = c;
+        }
+        double round = (double) changes / chart.length;
+        round = round * 100;
+        int chances = (int) Math.floor(round);
+
+        System.out.println("The chances of getting sick to this sea: "+ Arrays.toString(chart) +"\n" +
+                "is: "+chances+"%");
     }
 }
